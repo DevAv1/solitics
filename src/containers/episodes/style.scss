@@ -9,6 +9,10 @@
     display: flex;
     gap: 12px;
     align-items: center;
+    .filter-wrapper {
+      display: flex;
+      gap: 12px;
+    }
   }
   .episodes-container {
     display: flex;
