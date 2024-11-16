@@ -10,7 +10,7 @@ import { BasicSnackbar } from "./components/BasicSnackbar";
 import { Welcome } from "./containers/welcome";
 
 export const App = () => {
-  const [category, setCategory] = useState(CategoryHelper.CHARACTERS);
+  const [category, setCategory] = useState();
   return (
     <div className="app">
       <HeaderTitle />

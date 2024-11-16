@@ -1,5 +1,5 @@
 .typing-container {
-  width: 80%;
+  width: 100%;
   max-width: 820px;
   .typing-text {
     font-size: 1.5rem;
@@ -10,6 +10,15 @@
     overflow: hidden;
     width: 0;
     animation: typing 5s steps(80) 1s forwards, blink 0.75s step-end infinite;
+
+    @media screen and (max-width: 865px) {
+      animation: unset;
+      width: 100%;
+      overflow: unset;
+      white-space: wrap;
+      border-right: unset;
+      text-align: center;
+    }
   }
 }
 
