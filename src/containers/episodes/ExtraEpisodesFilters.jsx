@@ -92,6 +92,7 @@ export const ExtraEpisodesFilters = ({ onApplyFilter, data }) => {
           <Autocomplete
             disablePortal
             onChange={handleAirDateChange}
+            value={airDate}
             options={airDatePicklist}
             sx={{ width: 200 }}
             renderInput={(params) => (

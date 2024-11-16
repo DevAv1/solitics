@@ -9,9 +9,15 @@
     display: flex;
     gap: 12px;
     align-items: center;
+    max-width: 500px;
+    flex-wrap: wrap;
     .filter-wrapper {
       display: flex;
       gap: 12px;
+
+      @media screen and (max-width: 800px) {
+        flex-direction: column;
+      }
     }
   }
   .episodes-container {
