@@ -1,0 +1,23 @@
+.header-title {
+  display: flex;
+  align-items: baseline;
+  width: 100%;
+  justify-content: center;
+
+  .name-section {
+    font-size: 42px;
+  }
+
+  .hub-section {
+    font-size: 62px;
+  }
+
+  @media screen and (max-width: 600px) {
+    .name-section {
+      font-size: 22px;
+    }
+    .hub-section {
+      font-size: 42px;
+    }
+  }
+}

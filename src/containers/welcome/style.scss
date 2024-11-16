@@ -1,0 +1,29 @@
+.typing-container {
+  width: 80%;
+  max-width: 820px;
+  .typing-text {
+    font-size: 1.5rem;
+    font-weight: 500;
+    border-right: 3px solid #ed6c02;
+    padding-right: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 5s steps(80) 1s forwards, blink 0.75s step-end infinite;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
