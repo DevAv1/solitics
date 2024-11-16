@@ -10,19 +10,11 @@ export const ExtraEpisodesFilters = ({ onApplyFilter, data }) => {
   const [airDate, setAirDate] = useState("");
 
   const airDatePicklist = useMemo(() => {
-    const episodesAirDate = data.map((ep) => {
-      return ep.air_date;
-    });
-    return [
-      ...new Set(
-        episodesAirDate.map((item) => {
-          return {
-            id: item,
-            label: item,
-          };
-        })
-      ),
-    ];
+    const distinctAirDates = [...new Set(data.map((item) => item.air_date))];
+    return distinctAirDates.map((airDate) => ({
+      id: airDate,
+      label: airDate,
+    }));
   }, [data]);
 
   const handleSeasonChange = (season) => {

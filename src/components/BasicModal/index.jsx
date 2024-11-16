@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
@@ -16,26 +15,18 @@ const style = {
 };
 
 export const BasicModal = ({ isShow, onClose, children }) => {
-  const [show, setShow] = useState(false);
-
-  useEffect(() => {
-    setShow(isShow);
-  }, [isShow]);
-
-  const handleClose = () => onClose(false);
-
   return (
     <div>
       <Modal
-        open={show}
-        onClose={handleClose}
+        open={isShow}
+        onClose={onClose}
         aria-labelledby="modal-title"
         aria-describedby="modal-description"
       >
         <Box sx={style}>
           {children}
           <Button
-            onClick={handleClose}
+            onClick={onClose}
             sx={{ mt: 3 }}
             variant="contained"
             color="warning"
